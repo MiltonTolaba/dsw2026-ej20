@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Vinculamos su propia hoja de estilos -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <header>
+        <button class="btn-menu" id="toggleNav">☰ Menú</button>
+        <h1>Mi Dashboard</h1>
+    </header>
+
+    <nav id="navPanel">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="#">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Bienvenido al sistema</h2>
+        <p>El layout está ordenado con CSS Grid. En móvil ves un diseño apilado y en escritorio el panel de navegación a la izquierda (200px).</p>
+    </main>
+
+    <footer>
+        <p>Copyright © 2026 - Ejercicio 20</p>
+    </footer>
+
+    <script>
+        // Pequeño script para que el botón funcione en móviles
+        const btnMenu = document.getElementById('toggleNav');
+        const navPanel = document.getElementById('navPanel');
+
+        btnMenu.addEventListener('click', () => {
+            navPanel.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
